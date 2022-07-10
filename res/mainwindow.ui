@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>376</width>
+    <height>639</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>网页自动注册1.0</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icon.qrc">
+    <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="exeLineEdit"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="exePathButton">
+          <property name="text">
+           <string>配置环境</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="resLineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="resPathButton">
+          <property name="text">
+           <string>选择资源</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="loadButton">
+        <property name="text">
+         <string>解析资源文件</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView QScrollBar::vertical{ /*主体部分*/
+    width:10px;
+    background:rgb(89,89,89);
+    border:none;
+    border-radius:5px;
+}
+QTableView QScrollBar::handle::vertical{ /*滑块主体*/
+    border-radius:5px;
+    width: 10px;
+    background:rgb(173,173,173);
+}
+QTableView QScrollBar::handle::vertical::hover{
+    background:rgb(232,232,232);
+}
+QTableView QScrollBar::add-line::vertical{/*上箭头*/
+    border:none;
+}
+QTableView QScrollBar::sub-line::vertical{/*下箭头*/
+    border:none;
+}
+
+
+
+QTableView
+{
+	background: rgb(55,55,55);
+}
+QTableView{
+    selection-background-color:rgb(255,0,0);
+    background-color:rgb(50,50,50);
+    border:1px solid rgb(70,70,70);
+    color:rgb(200,200,200)
+}
+ 
+QTableView::item
+{
+       border:1px solid rgb(65,65,65);
+	color:rgb(200,200,200);
+ 
+}
+QTableView::item:hover
+{
+    background-color: rgb(30,30,30);
+    font: 75 9pt &quot;Microsoft YaHei&quot;;
+    color:rgb(31,163,246);
+}
+QTableView::item::selected
+{
+    background-color: rgb(30,30,30);
+    font: 75 9pt &quot;Microsoft YaHei&quot;;
+    color:rgb(31,163,246);
+}
+ 
+ 
+ 
+ 
+QHeaderView::section{
+    background-color:rgb(90,90,90);
+      color:rgb(200,200,200);
+    border:1px solid rgb(60,60,60);
+    border-bottom:1px solid rgb(70,70,70);
+    height:27px;
+    min-width:38px;
+}
+QHeaderView::section:hover
+{
+    background-color:rgb(80,80,80);
+ 
+}</string>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="runButton">
+        <property name="text">
+         <string>启动网页自动注册系统</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
